@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker Application</title>
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="./main.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <!-- FONT AWESOME CDN -->
+    <script
+      src="https://kit.fontawesome.com/0581082bd4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <h1 class="head">Budget Tracker</h1>
+
+    <div class="main">
+      <div class="container">
+        <div class="topbar">
+          <p class="bal_head">Your Balance</p>
+          <p class="bal_body">
+            <span id="currency">£</span>
+            <span id="balance">100</span>
+          </p>
+        </div>
+        <div class="form">
+          <p class="trans_head">Add Transaction</p>
+          <div class="form-c">
+            <label class="label" for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Details" />
+          </div>
+          <div class="form-c">
+            <label class="label" for="type">Type</label>
+            <div class="radio">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="type"
+                id="income"
+                checked
+              />
+              <label for="radio">Income</label>
+            </div>
+            <div class="radio">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="type"
+                id="expense"
+              />
+              <label for="radio">Expense</label>
+            </div>
+          </div>
+          <div class="form-c">
+            <label class="label" for="amount">Amount</label>
+            <input
+              type="number"
+              name="amount"
+              id="amount"
+              placeholder="e.g 400"
+            />
+          </div>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-dark px-4 gap-3" id="submit">
+              Submit
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-danger px-4"
+              id="cancel"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+        <div class="trans_list">
+          <p class="trans_lihead">Transaction Details</p>
+          <ul id="list_of_transactions">
+            <li class="transaction income">
+              <p>Income</p>
+              <div class="right">
+                <p class="amount_display">£300</p>
+                <i class="fa-solid fa-pen-to-square fa-lg"></i>
+                <i class="fa-solid fa-trash fa-lg"></i>
+              </div>
+            </li>
+            <li class="transaction expense">
+              <p>Expense</p>
+              <div class="right">
+                <p class="amount_display">£100</p>
+                <i class="fa-solid fa-pen-to-square fa-lg"></i>
+                <i class="fa-solid fa-trash fa-lg"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span>&copy; Designed & Developed by Anupam Pammi</span>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
